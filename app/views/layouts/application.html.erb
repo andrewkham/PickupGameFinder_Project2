@@ -3,7 +3,6 @@
 <head>
   <title>PickupGameFinder</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,9 +16,8 @@
 
     <div class = 'page-header'>
       <ul class="nav nav-pills pull-right">
-        <li><%= link_to 'Find Games', users_path %></li>
         <li><%= link_to 'Create Games', users_path %></li>
-        <li><%= link_to 'Find Courts', users_path %></li>
+        <li><%= link_to 'Join Games', users_path %></li>
         <li>
           <% if current_user %>
             <%= link_to 'My Profile', user_path(current_user.id) %>
