@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   post '/login'    => 'sessions#create'
   patch "users/:id" => "users#update"
   delete '/logout' => 'sessions#destroy'
+  delete 'users/:id' => 'users#destroy'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
