@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PickupGameFinder</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+  <div class = 'container'>
+
+    <div class = 'page-header'>
+      <ul class="nav nav-pills pull-right">
+        <li><%= link_to 'Find Games', users_path %></li>
+        <li><%= link_to 'Create Games', users_path %></li>
+        <li><%= link_to 'Find Courts', users_path %></li>
+        <li>
+          <% if current_user %>
+            <%= link_to 'My Profile', user_path(current_user.id) %>
+          <% else %>
+            <%= link_to 'Sign Up', users_new_path %>
+          <% end %>
+        </li>
+        <li>
+          <% if current_user %>
+            <%= link_to 'Log Out', logout_path, method: :delete %>
+          <% else %>
+            <%= link_to 'Log In', login_path %>
+          <% end %>
+        </li>
+      </ul>
+        <h1>
+          <%= link_to 'Streetball', users_path %>
+          <small>Pickup Game Finder</small>
+        </h1>
+    </div>
+
+    <div class = 'row'>
+      <p class = "pull-right">
+        <% if current_user %>
+          Hello, <%= current_user.first_name %>
+        <% end %>
+      </p>
+      <%= flash[:notice] %>
+      <%= yield %>
+    </div>
+
+  </div>
+
+
+</body>
+</html>
