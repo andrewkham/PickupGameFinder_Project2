@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   post '/login'    => 'sessions#create'
   delete '/logout' => 'sessions#destroy'
 
-  get "games" => "games#index"
+  get "games(.:format)" => "games#index"
   get "games/new" => "games#new"
   post "games" => "games#create"
   get "games/:id" => "games#show", as: :game

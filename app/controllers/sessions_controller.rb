@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
       # make a new key in our session object called :user_id
       # which gets stored in a cookie in our browser
       session[:user_id] = user.id.to_s
-      redirect_to users_path
+      redirect_to games_path
     else
       render :new
     end
@@ -17,6 +17,6 @@ class SessionsController < ApplicationController
   def destroy
     session.delete(:user_id)
     flash[:notice] = "You have successfully logged out."
-    redirect_to users_path
+    redirect_to games_path
   end
 end

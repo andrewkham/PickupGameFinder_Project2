@@ -8,7 +8,8 @@ class GamesController < ApplicationController
     format.json {
         render json: @games
     }
-end
+  end
+  
   end
 
   def show
