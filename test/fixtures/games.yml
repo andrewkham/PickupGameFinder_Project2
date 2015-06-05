@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  court_name: MyString
+  court_address: MyString
+  sport: MyString
+  game_at: MyString
+  spots: 1
+  fee: 9.99
+  description: MyString
+
+two:
+  title: MyString
+  court_name: MyString
+  court_address: MyString
+  sport: MyString
+  game_at: MyString
+  spots: 1
+  fee: 9.99
+  description: MyString
