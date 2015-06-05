@@ -1,25 +1,25 @@
-<strong>Title: </strong><%= @user.first_name %>
+<strong>Title: </strong><%= @game.title %>
 <br>
 <br>
-<strong>Court Name: </strong><%= @user.last_name %>
+<strong>Venue: </strong><%= @game.court_name %>
 <br>
 <br>
-<strong>Address: </strong><%= @user.alias %>
+<strong>Address: </strong><%= @game.court_address %>
 <br>
 <br>
-<strong>Sport: </strong><%= @user.email %>
+<strong>Sport: </strong><%= @game.sport %>
 <br>
 <br>
-<strong>Date & Time: </strong><%= @user.phone %>
+<strong>Date & Time: </strong><%= @game.game_at %>
 <br>
 <br>
-<strong>Spots: </strong><%= @user.gender %>
+<strong>Spots: </strong><%= @game.spots %>
 <br>
 <br>
-<strong>Fee: </strong><%= @user.height %>
+<strong>Fee: </strong><%= @game.fee %>
 <br>
 <br>
-<strong>Description: </strong><%= @user.description %>
+<strong>Description: </strong><%= @game.description %>
 <br>
 <br>
 <%= link_to 'Edit', edit_user_path, class:"btn btn-primary"  %>

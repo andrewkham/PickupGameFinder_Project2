@@ -1,6 +1,14 @@
 class GamesController < ApplicationController
   def index
     @games = Game.all
+    respond_to do |format|
+    format.html {
+        render
+    }
+    format.json {
+        render json: @games
+    }
+end
   end
 
   def show
@@ -47,6 +55,6 @@ class GamesController < ApplicationController
   private
 
   def game_params
-    params.require(:game).permit(:title, :court_name, :court_address, :sport, :game_at, :spots, :fee, :description)
+    params.require(:game).permit(:title, :court_name, :court_address, :sport, :game_at, :spots, :fee, :description, user_ids: [])
   end
 end

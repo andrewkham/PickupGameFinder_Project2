@@ -17,7 +17,6 @@
     <div class = 'page-header'>
       <ul class="nav nav-pills pull-right">
         <li><%= link_to 'Create Games', games_new_path %></li>
-        <li><%= link_to 'Join Games', games_new_path %></li>
         <li>
           <% if current_user %>
             <%= link_to 'My Profile', user_path(current_user.id) %>
@@ -34,7 +33,7 @@
         </li>
       </ul>
         <h1>
-          <%= link_to 'Streetball', users_path %>
+          <%= link_to 'Streetball', root_path %>
           <small>Pickup Game Finder</small>
         </h1>
     </div>
