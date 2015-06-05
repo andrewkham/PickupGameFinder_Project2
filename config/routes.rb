@@ -3,18 +3,19 @@ Rails.application.routes.draw do
   get "users/new" => "users#new"
   post "users" => "users#create"
   get "users/:id" => "users#show", as: :user
-  get '/login'     => 'sessions#new'
   get "users/:id/edit" => "users#edit", as: :edit_user
-  post '/login'    => 'sessions#create'
   patch "users/:id" => "users#update"
-  delete '/logout' => 'sessions#destroy'
   delete 'users/:id' => 'users#destroy'
+
+  get '/login'     => 'sessions#new'
+  post '/login'    => 'sessions#create'
+  delete '/logout' => 'sessions#destroy'
 
   get "games" => "games#index"
   get "games/new" => "games#new"
   post "games" => "games#create"
-  get "games/:id" => "games#show"
-  get "games/:id/edit" => "games#edit"
+  get "games/:id" => "games#show", as: :game
+  get "games/:id/edit" => "games#edit", as: :edit_game
   patch "games/:id" => "games#udpate"
   delete "games/:id" => "games#destroy"
 

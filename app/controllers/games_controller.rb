@@ -12,7 +12,7 @@ class GamesController < ApplicationController
   end
 
   def create
-    @game = Game.new(user_params)
+    @game = Game.new(game_params)
     if @game.save
       # session[:id] = @user.id.to_s
       redirect_to users_path
@@ -37,7 +37,7 @@ class GamesController < ApplicationController
 
   def destroy
     @game = Game.find(params[:id])
-    @user.destroy
+    @game.destroy
       respond_to do |format|
         format.html { redirect_to users_path, notice: 'Game was successfully destroyed.' }
         format.json { head :no_content }

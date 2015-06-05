@@ -1,0 +1,15 @@
+<% @games.each do |game| %>
+  <tr>
+    <td><%= game.title %></td>
+    <td><%= game.court_name %></td>
+    <td><%= game.court_address %></td>
+    <td><%= game.sport %></td>
+    <td><%= game.game_at %></td>
+    <td><%= game.spots %></td>
+    <td><%= game.fee %></td>
+    <td><%= game.description %></td>
+    <td><%= link_to 'Show', game %></td>
+    <td><%= link_to 'Edit', game %></td>
+    <td><%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
