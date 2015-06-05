@@ -10,6 +10,14 @@ Rails.application.routes.draw do
   delete '/logout' => 'sessions#destroy'
   delete 'users/:id' => 'users#destroy'
 
+  get "games" => "games#index"
+  get "games/new" => "games#new"
+  post "games" => "games#create"
+  get "games/:id" => "games#show"
+  get "games/:id/edit" => "games#edit"
+  patch "games/:id" => "games#udpate"
+  delete "games/:id" => "games#destroy"
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

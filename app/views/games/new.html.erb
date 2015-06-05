@@ -1,0 +1,38 @@
+<h1>Create a Game!</h1>
+<%= form_for @game do |f| %>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div>
+    <%= f.label :court_name %>
+    <%= f.text_field :court_name %>
+  </div>
+  <div>
+    <%= f.label :court_address %>
+    <%= f.text_field :court_address %>
+  </div>
+  <div>
+    <%= f.label :sport %>
+    <%= f.text_field :sport %>
+  </div>
+  <div>
+    <%= f.label :game_at %>
+    <%= f.text_field :game_at %>
+  </div>
+  <div>
+    <%= f.label :spots %>
+    <%= f.text_field :spots %>
+  </div>
+  <div>
+    <%= f.label :fee %>
+    <%= f.text_field :fee %>
+  </div>
+  <div>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </div>
+  <div>
+    <%= f.submit "Submit" %>
+  </div>
+<% end %>
