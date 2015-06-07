@@ -19,7 +19,9 @@ Rails.application.routes.draw do
   patch "games/:id" => "games#udpate"
   delete "games/:id" => "games#destroy"
 
-
+  resources :games do
+    resources :gameusers
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

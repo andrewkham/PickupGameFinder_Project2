@@ -1,4 +1,6 @@
 class GamesController < ApplicationController
+  before_action :authorized?,  except: :index
+
   def index
     @games = Game.all
     respond_to do |format|
@@ -9,7 +11,7 @@ class GamesController < ApplicationController
         render json: @games
     }
   end
-  
+
   end
 
   def show
