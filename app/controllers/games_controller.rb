@@ -58,7 +58,7 @@ class GamesController < ApplicationController
 
   def AddUserToGame
     @game.users.push(current_user)
-  end 
+  end
 
   private
 
