@@ -23,6 +23,7 @@ class GamesController < ApplicationController
   end
 
   def create
+    # @game.user_id = current_user.id
     @game = Game.new(game_params)
     if @game.save
       # session[:id] = @user.id.to_s
@@ -54,6 +55,10 @@ class GamesController < ApplicationController
         format.json { head :no_content }
     end
   end
+
+  # def AddUserToGame
+  #   @user
+  # end
 
   private
 

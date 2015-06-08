@@ -10,6 +10,7 @@ class CreateGames < ActiveRecord::Migration
       t.decimal :fee
       t.string :description
 
+
       t.timestamps null: false
     end
   end
