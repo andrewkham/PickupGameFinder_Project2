@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   post "games" => "games#create"
   get "games/:id" => "games#show", as: :game
   get "games/:id/edit" => "games#edit", as: :edit_game
-  patch "games/:id" => "games#udpate"
+  patch "games/:id" => "games#update"
   delete "games/:id" => "games#destroy"
 
   resources :games do
