@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: PickupGameFinder_production
-  username: PickupGameFinder
-  password: <%= ENV['PICKUPGAMEFINDER_DATABASE_PASSWORD'] %>
+  username: rails
+  password: <%= ENV['APP_DATABASE_PASSWORD'] %>
